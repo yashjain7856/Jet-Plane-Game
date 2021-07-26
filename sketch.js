@@ -33,7 +33,7 @@ function draw() {
   text(blackJet.score, 0, 70);
   
   fill(255);
-  text(whiteJet.score, 400, 70);
+  text(whiteJet.score, 350, 70);
 }
 
 
