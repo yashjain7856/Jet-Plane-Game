@@ -30,10 +30,10 @@ function draw() {
   
   textSize(80);
   fill(0);
-  text(blackJet.score, 150, 70);
+  text(blackJet.score, 0, 70);
   
   fill(255);
-  text(whiteJet.score, 250, 70);
+  text(whiteJet.score, 400, 70);
 }
 
 
