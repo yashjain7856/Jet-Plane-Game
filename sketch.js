@@ -40,6 +40,7 @@ function draw() {
   if(timer<=0)
   {
     noLoop();
+    background(0,0,0,0,5)
     textSize(50);
     fill(255);
     text("Game Over", 100, 250);

@@ -4,7 +4,7 @@ class Bullet {
     this.y = y;
     this.angle = angle;
     this.isWhite = isWhite;
-    this.speed = 2;
+    this.speed = 4;
     this.r = 1.5;
     // this bugger was added
     this.timeAlive = 0;

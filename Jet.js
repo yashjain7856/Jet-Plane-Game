@@ -6,7 +6,7 @@ class Jet {
     this.image = image;
     
     this.angle = 0;
-    this.speed = 1.5;
+    this.speed = 2;
     
     
     this.rotateAmount = 0;
@@ -33,7 +33,7 @@ class Jet {
     let enemyBullets = enemyPlayer.bullets;
     // I use 10 as the radius for the ship, you can tweak it
     for (let i = enemyBullets.length - 1; i >= 0; i--) {
-    	if (dist(this.x, this.y, enemyBullets[i].x, enemyBullets[i].y) < (10 + enemyBullets[i].r)){ 
+    	if (dist(this.x, this.y, enemyBullets[i].x, enemyBullets[i].y) < (15 + enemyBullets[i].r)){ 
         enemyBullets.splice(i, 1);
         enemyPlayer.score++;
       }
@@ -86,7 +86,7 @@ class Jet {
       this.bullets[i].update();
     	this.bullets[i].draw(); 
       
-      if (this.bullets[i].timeAlive > 200) {
+      if (this.bullets[i].timeAlive > 70) {
       	this.bullets.splice(i, 1);
       }
     }
