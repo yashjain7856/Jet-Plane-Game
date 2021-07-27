@@ -31,7 +31,7 @@ class Jet {
   processBeingHitByBullet(enemyPlayer) {
   
     let enemyBullets = enemyPlayer.bullets;
-    // I use 10 as the radius for the ship, you can tweak it
+    // I use 15 as the radius for the ship, you can tweak it
     for (let i = enemyBullets.length - 1; i >= 0; i--) {
     	if (dist(this.x, this.y, enemyBullets[i].x, enemyBullets[i].y) < (15 + enemyBullets[i].r)){ 
         enemyBullets.splice(i, 1);
