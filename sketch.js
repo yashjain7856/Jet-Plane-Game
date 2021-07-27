@@ -29,7 +29,7 @@ function draw() {
     
   textSize(80);
   fill(0);
-  text(blackJet.score, 10, 70);
+  text(blackJet.score, 350, 140);
   
   fill(255);
   text(whiteJet.score, 350, 70);
@@ -71,11 +71,10 @@ function keyPressed() {
   } else if (keyCode === 65) { 
   	// a
     whiteJet.rotateAmount = -ROTATE_AMOUNT;
-  } else if (keyCode === 17) {
-  	// ctrl
+  } else if (keyCode === UP_ARROW) {
     blackJet.shoot();
-  } else if (keyCode === 32) {
-  	// spacebar
+  } else if (keyCode === 87) {
+  	// w
     whiteJet.shoot();
   }
 }

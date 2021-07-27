@@ -11,9 +11,9 @@
 ### For Black Plane
 * Use the right arrow key to rotate clockwise.
 * Use the left arrow key to rotate anticlockwise.
-* Use the ctrl key to shoot bullets.
+* Use the up arrow key to shoot bullets.
 
 ### For white Plane
 * Use the "d" key to rotate clockwise.
 * Use the "a" key to rotate anticlockwise.
-* Use the spacebar key to shoot bullets.
+* Use the "w" key to shoot bullets.
