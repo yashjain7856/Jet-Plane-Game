@@ -6,7 +6,7 @@ class Jet {
     this.image = image;
     
     this.angle = 0;
-    this.speed = 2;
+    this.speed = 4;
     
     
     this.rotateAmount = 0;

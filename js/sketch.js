@@ -6,19 +6,22 @@ let whiteJetImage;
 const ROTATE_AMOUNT = 0.05;
 
 function preload() {
-	blackJetImage = loadImage("black-jet.png");
-  whiteJetImage = loadImage("white-jet.png");
-  backgroundImage = loadImage("backdrop.jpg");
+	blackJetImage = loadImage("images/black-jet.png");
+  whiteJetImage = loadImage("images/white-jet.png");
 }
 
 function setup() {
-  createCanvas(500, 500);
+  let wid=displayWidth*0.8;
+  let hig=displayHeight*0.8;
+  createCanvas(wid, hig);
   blackJet = new Jet(blackJetImage, false);
   whiteJet = new Jet(whiteJetImage, true);
 }
 
 function draw() {
-  background(backgroundImage);
+  let wid=displayWidth*0.8;
+  let hig=displayHeight*0.8;
+  background(89,89,89);
   
   // add the enemy bullets into the update function
   blackJet.update(whiteJet);
@@ -29,32 +32,31 @@ function draw() {
     
   textSize(80);
   fill(0);
-  text(blackJet.score, 350, 140);
+  text(blackJet.score, 40, 70);
   
   fill(255);
-  text(whiteJet.score, 350, 70);
+  text(whiteJet.score, wid-200, 70);
 
   textSize(50);
   fill(255);
-  text(timer, 210, 490);
+  text(timer, wid/2, hig-30);
   if(timer<=0)
   {
     noLoop();
-    background(0,0,0,0,5)
     textSize(50);
     fill(255);
-    text("Game Over", 100, 250);
+    text("Game Over", wid/2-100, hig/2-50);
     if(whiteJet.score>blackJet.score)
     {
-      text("White Wins", 100, 350);
+      text("White Wins!", wid/2-100, hig/2+50);
     }
     else if (whiteJet.score<blackJet.score)
     {
-      text("Black Wins", 100, 350);
+      text("Black Wins!", wid/2-100, hig/2+50);
     }
     else 
     {
-      text("It's a tie!", 100, 350);
+      text("It's a tie!", wid/2-100, hig/2+50);
     }
   }
 }
@@ -86,4 +88,3 @@ function keyReleased() {
   	whiteJet.rotateAmount = 0;
   }
 }
-
