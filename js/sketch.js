@@ -11,16 +11,16 @@ function preload() {
 }
 
 function setup() {
-  let wid=displayWidth*0.8;
-  let hig=displayHeight*0.8;
+  let wid=displayWidth*0.7;
+  let hig=displayHeight*0.7;
   createCanvas(wid, hig);
   blackJet = new Jet(blackJetImage, false);
   whiteJet = new Jet(whiteJetImage, true);
 }
 
 function draw() {
-  let wid=displayWidth*0.8;
-  let hig=displayHeight*0.8;
+  let wid=displayWidth*0.7;
+  let hig=displayHeight*0.7;
   background(89,89,89);
   
   // add the enemy bullets into the update function
